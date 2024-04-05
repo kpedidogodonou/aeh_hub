@@ -1,7 +1,15 @@
 streamlit
 torch
-sentence-transformers
+llama-index-embeddings-langchain 
+llama-index-vector-stores-qdrant 
 llama-index-llms-mistralai
+llama-index-readers-qdrant 
+llama-index-llms-mistralai 
+llama-index 
+langchain_community 
+langchain_mistralai
+langchain 
+mistralai 
 qdrant_client
 InstructorEmbedding
-llama_index
+sentence_transformers==2.2.2 
