@@ -1,6 +1,6 @@
 streamlit
 torch
-sentence_transformers
+sentence-transformers
 llama-index-llms-mistralai
 qdrant_client
 InstructorEmbedding
