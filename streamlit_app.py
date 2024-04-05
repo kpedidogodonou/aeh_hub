@@ -7,9 +7,8 @@ from llama_index.core.llms import ChatMessage
 
 # Settup Qdrant Client 
 q_client = qdrant_client.QdrantClient(
-   
-   st.secrets["QDRANT_HOST"],
-api_key=st.secrets["QDRANT_API_KEY"] 
+    st.secrets["QDRANT_HOST"],
+    api_key=st.secrets["QDRANT_API_KEY"] 
 )
 
 # Settup Instructor for embedding 
