@@ -2,8 +2,8 @@ import streamlit as st
 import qdrant_client
 from qdrant_client import QdrantClient
 from InstructorEmbedding import INSTRUCTOR
-from llama_index.llms.mistralai import MistralAI
 from llama_index.core.llms import ChatMessage
+from llama_index.llms.mistralai import MistralAI
 
 # Settup Qdrant Client 
 q_client = qdrant_client.QdrantClient(
