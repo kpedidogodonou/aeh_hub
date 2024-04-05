@@ -1,4 +1,5 @@
 streamlit
+torch
 llama-index-llms-mistralai
 qdrant_client
 InstructorEmbedding
