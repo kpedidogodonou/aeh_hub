@@ -1,4 +1,4 @@
-dotenv
+streamlit
 llama-index-llms-mistralai
 qdrant_client
 InstructorEmbedding
