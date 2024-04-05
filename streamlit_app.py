@@ -3,7 +3,7 @@ import qdrant_client
 from qdrant_client import QdrantClient
 from InstructorEmbedding import INSTRUCTOR
 #from llama_index.core.llms import ChatMessage
-#from llama_index.llms.mistralai import MistralAI
+from llama_index.llms.mistralai import MistralAI
 
 # Settup Qdrant Client 
 q_client = qdrant_client.QdrantClient(
@@ -16,6 +16,7 @@ embedding_model = INSTRUCTOR('hkunlp/instructor-large')
 
 # Settup MistalAI as llm 
 mistral_api_key = st.secrets["MISTRAL_API_KEY"] 
+print(mistral_api_key)
 model = "mistral-medium-latest"
 llm = MistralAI(api_key=mistral_api_key, model=model)
 
