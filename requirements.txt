@@ -1,0 +1,5 @@
+dotenv
+llama-index-llms-mistralai
+qdrant_client
+InstructorEmbedding
+llama_index
