@@ -2,9 +2,8 @@ import streamlit as st
 import qdrant_client
 from qdrant_client import QdrantClient
 from InstructorEmbedding import INSTRUCTOR
-from llama_index.core.llms import ChatMessage
-from llama_index.llms.mistralai import MistralAI
-
+from mistralai.client import MistralClient
+from mistralai.models.chat_completion import ChatMessage
 
 
 
@@ -21,9 +20,9 @@ def main():
 
     # Settup MistalAI as llm 
     mistral_api_key = st.secrets["MISTRAL_API_KEY"] 
-    print(mistral_api_key)
+
     model = "mistral-medium-latest"
-    llm = MistralAI(api_key=mistral_api_key, model=model)
+    llm = MistralClient(api_key=mistral_api_key)
 
     def aeh_chatbot(query):
       #Embedd the query
@@ -57,8 +56,10 @@ def main():
       ]
         
       # Ask Question to mistral
-      response = llm.chat(messages)
-      return response.message.content
+      response = llm.chat(
+            model=model,
+            messages=messages)
+      return response.choices[0].message.content
 
 
     st.set_page_config(page_title="AEH Knwoledge Hub")
